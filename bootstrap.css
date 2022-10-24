@@ -6191,7 +6191,6 @@ textarea.form-control-lg {
     display: flex;
     flex-grow: 0;
     padding: 0;
-    overflow-y: visible;
     background-color: transparent !important;
   }
 }
