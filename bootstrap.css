@@ -7613,8 +7613,6 @@ textarea.form-control-lg {
 }
 
 .mx-auto {
-  width: auto;
-  height: auto;
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -8300,6 +8298,8 @@ textarea.form-control-lg {
 
 .rounded {
   border-radius: var(--bs-border-radius) !important;
+  width: auto;
+  height: auto;
 }
 
 .rounded-0 {
