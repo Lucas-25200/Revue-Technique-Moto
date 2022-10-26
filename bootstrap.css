@@ -8298,8 +8298,6 @@ textarea.form-control-lg {
 
 .rounded {
   border-radius: var(--bs-border-radius) !important;
-  width: auto;
-  height: auto;
 }
 
 .rounded-0 {
