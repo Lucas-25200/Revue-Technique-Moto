@@ -7613,7 +7613,7 @@ textarea.form-control-lg {
 }
 
 .mx-auto {
-  width: 50%;
+  width: auto;
   margin-right: auto !important;
   margin-left: auto !important;
 }
