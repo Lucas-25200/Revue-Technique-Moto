@@ -7614,6 +7614,7 @@ textarea.form-control-lg {
 
 .mx-auto {
   width: auto;
+  height: auto;
   margin-right: auto !important;
   margin-left: auto !important;
 }
