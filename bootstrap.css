@@ -601,8 +601,6 @@ progress {
 }
 
 .img-fluid {
-  border: 4rem;
-  padding-top: 4rem;
   max-width: 100%;
   height: auto;
 }
@@ -7615,6 +7613,7 @@ textarea.form-control-lg {
 }
 
 .mx-auto {
+  width: 50%;
   margin-right: auto !important;
   margin-left: auto !important;
 }
