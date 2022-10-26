@@ -601,6 +601,7 @@ progress {
 }
 
 .img-fluid {
+  padding-top: 3rem;
   max-width: 100%;
   height: auto;
 }
