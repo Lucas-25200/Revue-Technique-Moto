@@ -600,10 +600,11 @@ progress {
   content: "— ";
 }
 .img-fluid1 {
-  border-top: 3rem;
   align-items: center;
   max-width: 100%;
+  height: auto;
   vertical-align: middle;
+  border-top: 3rem;
 }
 .img-fluid {
   align-items: center;
