@@ -604,7 +604,7 @@ progress {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  border-top: 3rem;
+  border-top: 5rem;
 }
 .img-fluid {
   align-items: center;
