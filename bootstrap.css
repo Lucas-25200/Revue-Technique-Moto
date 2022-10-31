@@ -603,6 +603,7 @@ progress {
   padding-top: 20px;
   align-items: center;
   max-width: 100%;
+  height: auto;
 }
 .img-fluid {
   align-items: center;
