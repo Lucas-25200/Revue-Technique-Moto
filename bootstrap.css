@@ -599,8 +599,20 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
-.img-fluid1 {
-  padding-top: 20px;
+.img-fluid-CGR {
+  padding-top: 54px;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+.img-fluid-ETP {
+  padding-top: 54px;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+.img-fluid-index {
+  padding-top: 56px;
   align-items: center;
   max-width: 100%;
   height: auto;
