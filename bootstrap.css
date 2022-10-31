@@ -600,7 +600,7 @@ progress {
   content: "— ";
 }
 .img-fluid1 {
-  display: flex;
+  justify-content: center;
   align-items: center;
   max-width: 100%;
   height: auto;
