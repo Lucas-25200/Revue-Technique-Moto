@@ -10,7 +10,7 @@ body{
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(135deg, #25ffde, #ff0000);
+  background: linear-gradient(135deg, #49ebff, #ff0000);
 }
 ::selection{
   color: #fff;
