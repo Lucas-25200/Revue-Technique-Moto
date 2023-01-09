@@ -2039,7 +2039,7 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #212529;
+  color: #ffffff;
   background-color: rgba(255, 255, 255, 0);
   border-color: #86b6fe00;
   outline: 0;
