@@ -2017,7 +2017,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0);
   background-clip: padding-box;
   border: 1px solid #ff0000;
@@ -2040,10 +2040,10 @@ progress {
 }
 .form-control:focus {
   color: #212529;
-  background-color: #fff;
-  border-color: #86b7fe;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: #86b6fe00;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(13, 109, 253, 0);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -3070,11 +3070,11 @@ textarea.form-control-lg {
 }
 
 .btn-outline-success {
-  --bs-btn-color: #ff0000;
-  --bs-btn-border-color: #198754;
+  --bs-btn-color: #6c6b6b;
+  --bs-btn-border-color: #ff0000;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #198754;
-  --bs-btn-hover-border-color: #198754;
+  --bs-btn-hover-bg: #00000000;
+  --bs-btn-hover-border-color: #ff0000;
   --bs-btn-focus-shadow-rgb: 25, 135, 84;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #198754;
