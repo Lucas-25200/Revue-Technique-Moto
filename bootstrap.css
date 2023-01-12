@@ -3135,6 +3135,8 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #ff0019;
   --bs-gradient: none;
+  margin-block: 1rem;
+  margin-inline: 107px;
 }
 
 .btn-outline-light {
