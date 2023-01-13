@@ -39,33 +39,24 @@
                   <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                    <script>
-                function searchWord() {
-                  // Récupération de la valeur saisie dans le champ de recherche
-                  var searchTerm = document.getElementById("search-input").value;
-                  // Récupération de l'objet canvas
-                  var canvas = document.getElementById("image-canvas");
-                  // Récupération du contexte 2D du canvas
-                  var ctx = canvas.getContext("2d");
-                  // Récupération des coordonnées de l'image
-                  var img = document.getElementById("image");
-                  ctx.drawImage(img, 0, 0);
-                  // Récupération du texte de l'image
-                  var imageText = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                  // Recherche du mot dans le texte de l'image
-                  // et surlignage des occurences trouvées
-                  // (le code pour la recherche et le surlignage doit être écrit ici)
-                }
-              </script>
-                    <canvas id="canvas"></canvas>
-              <img id="image" src="Etude Technique et Pratique.html" alt="image contenant du texte" style="display: none;">
                   </form>
+                  <script>
+                    var searchBtn = document.getElementById("search-btn");
+                    earchBtn.addEventListener("click", function(){
+                    var searchValue = document.getElementById("search-input").value;
+                    // Code pour rechercher le mot sur les images
+                    });
+                    var images = document.getElementsByTagName("img");
+                    for (var i = 0; i < images.length; i++) {
+                    // Code pour extraire le texte de l'image
+                    if (imageText.includes(searchValue)) {
+                    // Code pour rediriger vers l'image
+                    }
+                      }
+                  </script>
+
                 </div>
               </nav>
-              
-            </head>
-            <body>
-              
 
               <a href="RMT.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip"
