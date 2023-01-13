@@ -39,10 +39,7 @@
                   <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
-              <script>
+                    <script>
                 function searchWord() {
                   // Récupération de la valeur saisie dans le champ de recherche
                   var searchTerm = document.getElementById("search-input").value;
@@ -60,13 +57,15 @@
                   // (le code pour la recherche et le surlignage doit être écrit ici)
                 }
               </script>
+                    <canvas id="canvas"></canvas>
+              <img id="image" src="Etude Technique et Pratique.html" alt="image contenant du texte" style="display: none;">
+                  </form>
+                </div>
+              </nav>
+              
             </head>
             <body>
-              <input type="text" id="search-input" placeholder="Rechercher un mot">
-              <button onclick="searchWord()">Rechercher</button>
-              <br>
-              <canvas id="canvas"></canvas>
-              <img id="image" src="Etude Technique et Pratique.html" alt="image contenant du texte" style="display: none;">
+              
 
               <a href="RMT.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip"
