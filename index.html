@@ -41,18 +41,6 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                   </form>
                   <script>
-                    // Utilisez Tesseract.js pour extraire le texte de l'image
-                    Tesseract.recognize(document.getElementById('image'))
-                    .then(function(result) {
-                    var text = result.text;
-
-                    // Lorsque l'utilisateur clique sur le bouton de recherche, recherchez le mot dans le texte extrait de l'image
-                    $('#search-btn').click(function() {
-                    var searchTerm = $('#search-input').val();
-                    var searchResults = text.match(new RegExp(searchTerm, "gi"));
-                    $('#search-results').html(searchResults);
-                    });
-                  });
                     var searchBtn = document.getElementById("search-btn");
                     earchBtn.addEventListener("click", function(){
                     var searchValue = document.getElementById("search-input").value;
@@ -63,9 +51,10 @@
                     // Code pour extraire le texte de l'image
                     if (imageText.includes(searchValue)) {
                     // Code pour rediriger vers l'image
-                    }
+                        }
                       }
                   </script>
+
                 </div>
               </nav>
 
