@@ -42,6 +42,32 @@
                   </form>
                 </div>
               </nav>
+              <script>
+                function searchWord() {
+                  // Récupération de la valeur saisie dans le champ de recherche
+                  var searchTerm = document.getElementById("search-input").value;
+                  // Récupération de l'objet canvas
+                  var canvas = document.getElementById("image-canvas");
+                  // Récupération du contexte 2D du canvas
+                  var ctx = canvas.getContext("2d");
+                  // Récupération des coordonnées de l'image
+                  var img = document.getElementById("image");
+                  ctx.drawImage(img, 0, 0);
+                  // Récupération du texte de l'image
+                  var imageText = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                  // Recherche du mot dans le texte de l'image
+                  // et surlignage des occurences trouvées
+                  // (le code pour la recherche et le surlignage doit être écrit ici)
+                }
+              </script>
+            </head>
+            <body>
+              <input type="text" id="search-input" placeholder="Rechercher un mot">
+              <button onclick="searchWord()">Rechercher</button>
+              <br>
+              <canvas id="image-canvas"></canvas>
+              <img id="image" src="index.html" style="display: none;">
+
               <a href="RMT.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip"
               data-bs-title="va vous telecharger la totaliter de la revue technique.">Download</a>
