@@ -66,20 +66,8 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
               </div>
               
-              <script>
-                function downloadPDF() {
-                  var progressBar = document.querySelector(".progress-bar");
-                  var interval = setInterval(function() {
-                    progressBar.style.width = progressBar.getAttribute("aria-valuenow") + "%";
-                    progressBar.setAttribute("aria-valuenow", 
-                    parseInt(progressBar.getAttribute("aria-valuenow")) + 10);
-                    if (progressBar.getAttribute("aria-valuenow") >= 100) {
-                      clearInterval(interval);
-                      window.location.href = "RMT.pdf";
-                    }
-                  }, 1000);
-                }
-                var xhr = new XMLHttpRequest();
+              <script>            
+var xhr = new XMLHttpRequest();
 xhr.open("GET", "RMT.pdf", true);
 xhr.responseType = "blob";
 xhr.onprogress = function(e) {
