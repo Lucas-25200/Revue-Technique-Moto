@@ -66,6 +66,28 @@
               <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                 <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
               </div>
+              
+              <script>var xhr = new XMLHttpRequest();
+                xhr.open("GET", "RMT.pdf", true);
+                xhr.responseType = "blob";
+                xhr.onprogress = function(e) {
+                  var percentComplete = (e.loaded / e.total) * 100;
+                  console.log(percentComplete + "% téléchargé");
+                };
+                xhr.onload = function() {
+                  console.log("téléchargement terminé!");
+                };
+                xhr.send();
+                
+                var progressBar = document.querySelector(".progress-bar");
+                xhr.onprogress = function(e) {
+                  var percentComplete = (e.loaded / e.total) * 100;
+                  progressBar.setAttribute("aria-valuenow", percentComplete);
+                  progressBar.setAttribute("aria-valuemin", 0);
+                  progressBar.setAttribute("aria-valuemax", 100);
+                  progressBar.style.width = percentComplete + "%";
+                };
+                </script>
 
         </div>
       </div>
