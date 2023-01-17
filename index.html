@@ -66,27 +66,26 @@
                 <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
               </div>
               
-              <script>            
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "RMT.pdf", true);
-xhr.responseType = "blob";
-xhr.onprogress = function(e) {
-  var percentComplete = (e.loaded / e.total) * 100;
-  console.log(percentComplete + "% téléchargé");
-};
-xhr.onload = function() {
-  console.log("téléchargement terminé!");
-};
-xhr.send();
-
-var progressBar = document.querySelector(".progress-bar");
-xhr.onprogress = function(e) {
-  var percentComplete = (e.loaded / e.total) * 100;
-  progressBar.setAttribute("aria-valuenow", percentComplete);
-  progressBar.setAttribute("aria-valuemin", 0);
-  progressBar.setAttribute("aria-valuemax", 100);
-  progressBar.style.width = percentComplete + "%";
-};
+              <script>
+                var downloadButton = document.getElementById("download-button");
+                var progressBar = document.getElementsByClassName("progress-bar")[0];
+                var downloadTime;
+              
+                downloadButton.addEventListener("click", function() {
+                  fetch("RMT.pdf")
+                    .then(response => response.headers.get("Content-Length"))
+                    .then(length => {
+                      downloadTime = length;
+                      var interval = setInterval(function() {
+                        var progress = (100 * (Date.now() - startTime)) / downloadTime;
+                        progressBar.style.width = progress + "%";
+                        progressBar.setAttribute("aria-valuenow", progress);
+                        if (progress >= 100) {
+                          clearInterval(interval);
+                        }
+                      }, 100);
+                    });
+                });
               </script>
 
         </div>
