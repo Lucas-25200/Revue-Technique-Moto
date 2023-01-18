@@ -61,33 +61,7 @@
               <a href="RMT.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip"
               data-bs-title="va vous telecharger la totaliter de la revue technique.">Download</a>
-
-              <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar progress-bar-striped progress-bar-animated"style="width: 0%"></div>
-              </div>
               
-              <script>
-                var downloadButton = document.getElementById("download-button");
-                var progressBar = document.getElementsByClassName("progress-bar")[0];
-                var downloadTime;
-              
-                downloadButton.addEventListener("click", function() {
-                  fetch("RMT.pdf")
-                    .then(response => response.headers.get("Content-Length"))
-                    .then(length => {
-                      downloadTime = length;
-                      var interval = setInterval(function() {
-                        var progress = (100 * (Date.now() - startTime)) / downloadTime;
-                        progressBar.style.width = progress + "%";
-                        progressBar.setAttribute("aria-valuenow", progress);
-                        if (progress >= 100) {
-                          clearInterval(interval);
-                        }
-                      }, 100);
-                    });
-                });
-              </script>
-
         </div>
       </div>
     </div>
