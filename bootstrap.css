@@ -600,12 +600,14 @@ progress {
   align-items: center;
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 .img-fluid-ETP {
   padding-top: 54px;
   align-items: center;
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 .img-fluid-index {
   padding-top: 56px;
