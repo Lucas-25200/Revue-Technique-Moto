@@ -693,6 +693,8 @@ progress {
   flex-wrap: wrap;
   margin-right: calc(0.0 * var(--bs-gutter-x));
   margin-left: calc(0.0 * var(--bs-gutter-x));
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .row > * {
   flex-shrink: 0;
