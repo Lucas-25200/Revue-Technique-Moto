@@ -699,7 +699,6 @@ progress {
   width: 100%;
   max-width: 100%;
   margin-top: var(--bs-gutter-y);
-  margin-bottom: 3rem;
 }
 
 .col {
