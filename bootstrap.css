@@ -596,21 +596,18 @@ progress {
   content: "— ";
 }
 .img-fluid-CGR {
-  padding-top: 54px;
   align-items: center;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
 .img-fluid-ETP {
-  padding-top: 54px;
   align-items: center;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
 .img-fluid-index {
-  padding-top: 56px;
   align-items: center;
   max-width: 100%;
   height: auto;
@@ -6853,7 +6850,6 @@ textarea.form-control-lg {
 }
 
 .fixed-top {
-  position: fixed;
   top: 0;
   right: 0;
   left: 0;
