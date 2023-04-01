@@ -38,47 +38,7 @@
                 <div class="container-fluid">
                   <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="button">Search</button>
-                  ______________________________________________recherche de text sur une image_____________________________________________________________
-                  <form>
-                    <label for="search">Rechercher du texte sur l'image :</label>
-                    <input type="text" id="search" name="search">
-                    <button type="button" onclick="searchImage()">Rechercher</button>
-                  </form>
-                  
-                  <img src="Image RMT/page1.jpg" id="image">
-                  
-                  <script>
-                  function searchImage() {
-  var searchQuery = document.getElementById("search").value;
-  var image = document.getElementById("image");
-
-  // Créez un élément <canvas> pour dessiner l'image sur lequel la recherche sera effectuée
-  var canvas = document.createElement("canvas");
-  var context = canvas.getContext("2d");
-  context.drawImage(image, 0, 0);
-
-  // Obtenez l'image sous forme de données brutes
-  var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-  var pixels = imageData.data;
-
-  // Convertissez l'image en un format lisible par l'OCR (par exemple, un fichier image PNG)
-  var ocrImage = convertToOCRFormat(imageData);
-
-  // Appelez la bibliothèque OCR pour extraire le texte de l'image
-  var ocr = new TesseractOCR();
-  ocr.recognize(ocrImage).then(function(result) {
-    // Recherchez le texte extrait pour la requête de recherche
-    if (result.text.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
-      alert("Le texte \"" + searchQuery + "\" a été trouvé sur l'image !");
-    } else {
-      alert("Le texte \"" + searchQuery + "\" n'a pas été trouvé sur l'image.");
-    }
-  });
-}
-
-                  </script>
-__________________________________________________________________________________________________________________________________________________                  
+                    <button class="btn btn-outline-success" type="button">Search</button>            
                 </div>
               </nav>
 
