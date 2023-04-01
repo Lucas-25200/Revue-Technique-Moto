@@ -39,27 +39,53 @@
                   <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="button">Search</button>
+                  _________________________________________________________________________________________________________________________________________
+                  <form>
+                    <label for="search">Rechercher du texte sur l'image :</label>
+                    <input type="text" id="search" name="search">
+                    <button type="button" onclick="searchImage()">Rechercher</button>
                   </form>
+                  
+                  <img src="example.jpg" id="image">
+                  
                   <script>
-                    var searchBtn = document.getElementById("search-btn");
-                    earchBtn.addEventListener("click", function(){
-                    var searchValue = document.getElementById("search-input").value;
-                    // Code pour rechercher le mot sur les images
-                    });
-                    var images = document.getElementsByTagName("img");
-                    for (var i = 0; i < images.length; i++) {
-                    // Code pour extraire le texte de l'image
-                    if (imageText.includes(searchValue)) {
-                    // Code pour rediriger vers l'image
+                  function searchImage() {
+                    var searchQuery = document.getElementById("search").value;
+                    var image = document.getElementById("image");
+                    var canvas = document.createElement("canvas");
+                    var context = canvas.getContext("2d");
+                    context.drawImage(image, 0, 0);
+                    var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                    var pixels = imageData.data;
+                    for (var i = 0; i < pixels.length; i += 4) {
+                      var red = pixels[i];
+                      var green = pixels[i + 1];
+                      var blue = pixels[i + 2];
+                      var alpha = pixels[i + 3];
+                      if (alpha > 0) {
+                        var color = "rgb(" + red + "," + green + "," + blue + ")";
+                        var text = getPixelText(color);
+                        if (text.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
+                          alert("Le texte \"" + searchQuery + "\" a été trouvé sur l'image !");
+                          return;
                         }
                       }
+                    }
+                    alert("Le texte \"" + searchQuery + "\" n'a pas été trouvé sur l'image.");
+                  }
+                  
+                  function getPixelText(color) {
+                    // Cette fonction doit être remplacée par votre propre code pour extraire le texte des pixels de l'image.
+                    // Vous pouvez utiliser des bibliothèques de reconnaissance optique de caractères (OCR) pour cela.
+                    return "";
+                  }
                   </script>
+__________________________________________________________________________________________________________________________________________________                  
                 </div>
               </nav>
 
               <a href="RMT.pdf" download type="button" class="btn btn-outline-danger" download-btn data-bs-toggle="tooltip" data-bs-placement="button" data-bs-custom-class="custom-tooltip" data-bs-title="va vous telecharger la totaliter de la revue technique.">
-                Download </a>
-              
+                Download </a> 
         </div>
       </div>
     </div>
