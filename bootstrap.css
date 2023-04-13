@@ -2461,7 +2461,7 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 .form-range:disabled::-webkit-slider-thumb {
-  background-color: #adb5bd;
+  background-color: #0080ff;
 }
 .form-range:disabled::-moz-range-thumb {
   background-color: #adb5bd;
