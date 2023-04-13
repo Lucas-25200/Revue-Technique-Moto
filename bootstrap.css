@@ -385,7 +385,7 @@ button:not(:disabled),
 [type=submit]:not(:disabled) {
   cursor: pointer;
 }
-
+-------Scrollbar------
 ::-webkit-scrollbar{
   width: 10px;
 }
@@ -396,11 +396,7 @@ background: #d8d8d8;
   background: linear-gradient(#ffffff00, #000000, #ffffff00);
   border-radius: 10px;
 }
-
-
-
-
-
+-----------------------
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -610,23 +606,7 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
-.img-fluid-CGR {
-  align-items: center;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-.img-fluid-ETP {
-  align-items: center;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-.img-fluid-index {
-  align-items: center;
-  max-width: 100%;
-  height: auto;
-}
+
 .img-fluid {
   align-items: center;
   max-width: 100%;
