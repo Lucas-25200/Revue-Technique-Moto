@@ -394,6 +394,7 @@ background: #494949;
 }
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(#003cff, #9900ff);
+  border-radius: 10px;
 }
 
 
