@@ -393,7 +393,7 @@ button:not(:disabled),
 background: #494949;
 }
 ::-webkit-scrollbar-thumb{
-  background: linear-gradient(#003cff, #b700ff);
+  background: linear-gradient(#003cff, #9900ff);
 }
 
 
