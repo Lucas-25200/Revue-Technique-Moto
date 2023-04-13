@@ -387,7 +387,7 @@ button:not(:disabled),
 }
 
 ::-webkit-scrollbar{
-  width: 15px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track{
 background: #494949;
