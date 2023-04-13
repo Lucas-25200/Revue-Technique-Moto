@@ -386,6 +386,20 @@ button:not(:disabled),
   cursor: pointer;
 }
 
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+background: #ff0000;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(#ff0000, #ffffff);
+}
+
+
+
+
+
 ::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -2461,7 +2475,7 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 .form-range:disabled::-webkit-slider-thumb {
-  background-color: #0080ff;
+  background-color: #adb5bd;
 }
 .form-range:disabled::-moz-range-thumb {
   background-color: #adb5bd;
