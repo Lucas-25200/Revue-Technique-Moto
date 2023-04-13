@@ -390,10 +390,10 @@ button:not(:disabled),
   width: 15px;
 }
 ::-webkit-scrollbar-track{
-background: #ff0000;
+background: #494949;
 }
 ::-webkit-scrollbar-thumb{
-  background: linear-gradient(#ff0000, #ffffff);
+  background: linear-gradient(#003cff, #b700ff);
 }
 
 
