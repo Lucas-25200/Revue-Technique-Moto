@@ -386,16 +386,19 @@ button:not(:disabled),
   cursor: pointer;
 }
 -------Scrollbar------
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track{
-background: #d8d8d8;
+
+::-webkit-scrollbar-track {
+  background: #d8d8d8;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
   background: linear-gradient(#be0000);
   border-radius: 10px;
 }
+
 -----------------------
 ::-moz-focus-inner {
   padding: 0;
