@@ -3239,23 +3239,23 @@ textarea.form-control-lg {
   }
 }
 ------------------------------------------------------------
-.tooltipsing {
+.telecharge {
   height: 0;
   overflow: hidden;
   transition: height 0.35s ease;
 }
 @media (prefers-reduced-motion: reduce) {
-  .tooltipsing {
+  .telecharge {
     transition: none;
   }
 }
-.tooltipsing.tooltip-horizontal {
+.telecharge.telecharge-horizontal {
   width: 0;
   height: auto;
   transition: width 0.35s ease;
 }
 @media (prefers-reduced-motion: reduce) {
-  .tooltipsing.tooltip-horizontal {
+  .telecharge.telecharge-horizontal {
     transition: none;
   }
 }
@@ -4227,8 +4227,8 @@ textarea.form-control-lg {
   --bs-card-spacer-y: 10px;
   --bs-card-spacer-x: 10px;
   --bs-card-title-spacer-y: 0.5rem;
-  --bs-card-border-width: 2px;
-  --bs-card-border-color: rgb(255 0 0);
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: rgb(255 0 25);
   --bs-card-border-radius: 0.375rem;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(0.375rem - 1px);
@@ -4249,7 +4249,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #ff000000;
   background-clip: border-box;
-  border: var(--bs-card-border-width) solid rgb(255, 0, 0);
+  border: var(--bs-card-border-width) solid rgb(255, 0, 25);
   border-radius: var(--bs-card-border-radius);
   margin-left: 10px;
   margin-right: 10px;
