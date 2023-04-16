@@ -3238,7 +3238,28 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-
+------------------------------------------------------------
+.tooltipsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tooltipsing {
+    transition: none;
+  }
+}
+.tooltipsing.tooltip-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tooltipsing.tooltip-horizontal {
+    transition: none;
+  }
+}
+------------------------------------------------------------
 .dropup,
 .dropend,
 .dropdown,
