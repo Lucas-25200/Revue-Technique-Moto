@@ -2994,6 +2994,17 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #dc3545;
 }
 .btn-up{
+  height: 50px;
+  width: 50px;
+  border-radius:35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+
   --bs-btn-bg: #dc3545;
   --bs-btn-border-color: #dc3545;
   --bs-btn-hover-color: #fff;
