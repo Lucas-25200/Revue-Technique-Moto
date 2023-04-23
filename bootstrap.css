@@ -3239,6 +3239,9 @@ textarea.form-control-lg {
   }
 }
 ------------------------------------------------------------
+.telecharge:not(.show) {
+  display: none;
+}
 .telecharge {
   height: 0;
   overflow: hidden;
