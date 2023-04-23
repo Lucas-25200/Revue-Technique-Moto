@@ -2993,6 +2993,9 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: #dc3545;
   --bs-btn-disabled-border-color: #dc3545;
 }
+.icone{
+  width: 50px;
+}
 .btn-up{
   height: 50px;
   width: 50px;
