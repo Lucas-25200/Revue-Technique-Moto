@@ -3238,31 +3238,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-------------------------------------------------------------
-.telecharge:not(.show) {
-  display: none;
-}
-.telecharge {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.35s ease;
-}
-@media (prefers-reduced-motion: reduce) {
-  .telecharge {
-    transition: none;
-  }
-}
-.telecharge.telecharge-horizontal {
-  width: 0;
-  height: auto;
-  transition: width 0.35s ease;
-}
-@media (prefers-reduced-motion: reduce) {
-  .telecharge.telecharge-horizontal {
-    transition: none;
-  }
-}
-------------------------------------------------------------
+
 .dropup,
 .dropend,
 .dropdown,
