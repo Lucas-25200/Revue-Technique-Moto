@@ -68,6 +68,22 @@
   <img src="Image RMT/Page4.jpg" class="img-fluid rounded-1">
   <img src="Image RMT/Page5.jpg" class="img-fluid rounded-1">
   <img src="Image RMT/Page6.jpg" class="img-fluid rounded-1">
+
+    <div class="btn-up">
+      <img src="Image RMT/arrow-up-short.svg" class="icone">
+      <script>
+        const btn = document.querySelector('.btn-up');
+
+        btn.addEventListener('click', () => {
+
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+          })
+
+        })
+      </script>
 </body>
 
 </html>

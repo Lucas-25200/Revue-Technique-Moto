@@ -3005,9 +3005,9 @@ textarea.form-control-lg {
   align-items: center;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 70px;
   cursor: pointer;
-
+  background: #a5a5a5;
   --bs-btn-bg: #dc3545;
   --bs-btn-border-color: #dc3545;
   --bs-btn-hover-color: #fff;
