@@ -397,6 +397,7 @@ button:not(:disabled),
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: linear-gradient(#420000)
+  
 }
 
 -----------------------
