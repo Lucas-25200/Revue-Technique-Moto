@@ -73,7 +73,7 @@
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
-/*---------------------------------------FIN-------------------------------------*/
+/*---------------------------------------FIN-ROOT------------------------------------*/
 *::before,
 *::after {
   box-sizing: border-box;
@@ -91,9 +91,9 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: (#ffffff);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: (#420000);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -395,8 +395,8 @@ button:not(:disabled),
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#be0000);
   border-radius: 10px;
+  background: linear-gradient(#420000)
 }
 
 -----------------------
