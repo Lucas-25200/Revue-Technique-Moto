@@ -387,18 +387,46 @@ button:not(:disabled),
 }
 -------Scrollbar------
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
+  height: 6px;
 }
 
-::-webkit-scrollbar-track {
-  background: #d8d8d8;
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#420000, #ff0000);
-  border-radius: 10px;
+  background: var(--first-color);
+  border: 31px none #ffffff;
+  border-radius: 5px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: var(--first-color);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--first-color);
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 -----------------------
 ::-moz-focus-inner {
   padding: 0;
