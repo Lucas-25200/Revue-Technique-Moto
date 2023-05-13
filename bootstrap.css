@@ -92,7 +92,8 @@
   font-size: 24px;
   margin-left: 5px;
 }
-.visites-count {
+
+.visit-counter {
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
@@ -102,7 +103,7 @@
   text-align: center;
 }
 
-#visit-counter {
+#visit-count {
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
