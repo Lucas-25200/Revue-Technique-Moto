@@ -92,6 +92,15 @@
   font-size: 24px;
   margin-left: 5px;
 }
+.visites-count {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #fff0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
 
 #visit-counter {
   display: inline-block;
