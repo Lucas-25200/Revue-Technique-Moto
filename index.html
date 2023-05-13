@@ -63,13 +63,17 @@
               </div>
 
               <script>
-                var downloadCount = 0;
+                var downloadCount = parseInt(localStorage.getItem('downloadCount')) || 0;
                 var downloadCounter = document.getElementById("download-count");
 
                 function incrementDownloadCount() {
                   downloadCount++;
                   downloadCounter.innerHTML = downloadCount;
+                  localStorage.setItem('downloadCount', downloadCount);
                 }
+
+                downloadCounter.innerHTML = downloadCount;
+
               </script>
 
         </div>
