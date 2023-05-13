@@ -57,36 +57,55 @@
               <a href="RMT2.pdf" download onclick="incrementDownloadCount()" class="btn btn-outline-danger" download-btn
                 data-bs-toggle="tooltip" data-bs-placement="boutom" data-bs-custom-class="custom-tooltip"
                 data-bs-title="va vous telechargez la totaliter de la revue technique.">Download</a>
-
               <div class="download-counter">
                 Téléchargements: <span id="download-count">0</span>
               </div>
 
-              <script>
-                var downloadCount = parseInt(localStorage.getItem('downloadCount')) || 0;
-                var downloadCounter = document.getElementById("download-count");
-
-                function incrementDownloadCount() {
-                  downloadCount++;
-                  downloadCounter.innerHTML = downloadCount;
-                  localStorage.setItem('downloadCount', downloadCount);
-                }
-
-                downloadCounter.innerHTML = downloadCount;
-
-              </script>
-
               <div class="visites-count">
                 Nombre de visites : <span id="visit-counter"></span></div>
-              <script>
-                var visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
-                var visitCounter = document.getElementById('visit-counter');
+                <script>
+                  // Initialisation des compteurs de téléchargement et de visiteurs
+                    let downloadCount = 0;
+                    let visitorCount = 0;
 
-                visitCount++;
-                localStorage.setItem('visitCount', visitCount);
-                visitCounter.innerHTML = visitCount;
+                    // Vérification de la présence de localStorage
+                    if (typeof (Storage) !== "undefined") {
+                      // Récupération des compteurs stockés dans localStorage
+                      downloadCount = localStorage.getItem("downloadCount");
+                      visitorCount = localStorage.getItem("visitorCount");
+                      // Vérification que les compteurs sont des nombres
+                      if (isNaN(downloadCount)) {
+                        downloadCount = 0;
+                      }
+                      if (isNaN(visitorCount)) {
+                        visitorCount = 0;
+                      }
+                    } else {
+                      console.log("LocalStorage n'est pas pris en charge sur ce navigateur.");
+                    }
 
-              </script>
+                    // Mise à jour des compteurs sur la page web
+                    document.getElementById("download-counter").innerHTML = downloadCount;
+                    document.getElementById("visitor-counter").innerHTML = visitorCount;
+
+                    // Incrémentation des compteurs à chaque visite et téléchargement
+                    function incrementCounters() {
+                      downloadCount++;
+                      visitorCount++;
+                      // Mise à jour des compteurs dans localStorage
+                      localStorage.setItem("downloadCount", downloadCount);
+                      localStorage.setItem("visitorCount", visitorCount);
+                      // Mise à jour des compteurs sur la page web
+                      document.getElementById("download-counter").innerHTML = downloadCount;
+                      document.getElementById("visitor-counter").innerHTML = visitorCount;
+                    }
+
+                    // Appel de la fonction incrementCounters() sur un événement de clic ou de téléchargement
+                    document.addEventListener("click", incrementCounters);
+                    window.addEventListener("load", incrementCounters);
+                    window.addEventListener("beforeunload", incrementCounters);
+
+                </script>
         </div>
       </div>
     </div>
