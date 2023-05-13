@@ -104,14 +104,9 @@
 }
 
 #visit-count {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #ffffff00;
-  padding: 8px 16px;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #ff0000;
+  font-size: 24px;
+  margin-left: 5px;
 }
 
 ---------------------------------------------------- 
