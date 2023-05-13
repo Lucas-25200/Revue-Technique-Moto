@@ -93,17 +93,19 @@
   margin-left: 5px;
 }
 
-.visites {
-  font-size: 20px;
+#visit-counter {
+  display: inline-block;
+  font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #fff0;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
+  color: #333;
+  background-color: #eee;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
----------------------------------------------------- *::before,
+---------------------------------------------------- 
+*::before,
 *::after {
   box-sizing: border-box;
 }
