@@ -54,23 +54,23 @@
                 </div>
               </nav>
 
-              <a href="RMT2.pdf" download id="download-count" class="btn btn-outline-danger" download-btn data-bs-toggle="tooltip"
-                data-bs-placement="boutom" data-bs-custom-class="custom-tooltip"
+              <a href="RMT2.pdf" download onclick="incrementDownloadCount()" class="btn btn-outline-danger" download-btn
+                data-bs-toggle="tooltip" data-bs-placement="boutom" data-bs-custom-class="custom-tooltip"
                 data-bs-title="va vous telechargez la totaliter de la revue technique.">Download</a>
 
-                <script>
-                  var downloadCount = 0;
-                    var downloadButton = document.getElementById("download-button");
-                    var downloadCounter = document.getElementById("download-count");
+              <div class="download-counter">
+                Téléchargements: <span id="download-count">0</span>
+              </div>
 
-                    downloadButton.onclick = function () {
-                      downloadCount++;
-                      downloadCounter.innerHTML = downloadCount;
-                    }
-                </script>
-                <div class="download-counter">
-                  Téléchargements: <span id="download-count">0</span>
-                </div>
+              <script>
+                var downloadCount = 0;
+                var downloadCounter = document.getElementById("download-count");
+
+                function incrementDownloadCount() {
+                  downloadCount++;
+                  downloadCounter.innerHTML = downloadCount;
+                }
+              </script>
 
         </div>
       </div>
