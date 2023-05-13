@@ -57,6 +57,20 @@
               <a href="RMT2.pdf" download class="btn btn-outline-danger" download-btn data-bs-toggle="tooltip"
                 data-bs-placement="boutom" data-bs-custom-class="custom-tooltip"
                 data-bs-title="va vous telechargez la totaliter de la revue technique.">Download</a>
+                
+                <script>
+                  var downloadCount = 0;
+                    var downloadButton = document.getElementById("download-button");
+                    var downloadCounter = document.getElementById("download-count");
+
+                    downloadButton.onclick = function () {
+                      downloadCount++;
+                      downloadCounter.innerHTML = downloadCount;
+                    }
+                </script>
+                <div class="download-counter">
+                  Téléchargements: <span id="download-count">0</span>
+                </div>
 
         </div>
       </div>
