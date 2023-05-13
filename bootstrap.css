@@ -3535,7 +3535,7 @@ fieldset:disabled .btn {
   right: 20px;
   bottom: 70px;
   cursor: pointer;
-  background: #00ff496b;
+  background: #00dfff7d;
 }
 
 .btn-light {
@@ -3674,7 +3674,6 @@ fieldset:disabled .btn {
   --bs-gradient: none;
   margin-block: 1rem;
   margin-inline: 107px;
-  cursor: s-resize;
 }
 
 .btn-outline-light {
