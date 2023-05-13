@@ -75,7 +75,16 @@
                 downloadCounter.innerHTML = downloadCount;
 
               </script>
+              <div>Nombre de visites : <span id="visit-counter"></span></div>
+              <script>
+                var visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
+                  var visitCounter = document.getElementById('visit-counter');
 
+                  visitCount++;
+                  localStorage.setItem('visitCount', visitCount);
+                  visitCounter.innerHTML = visitCount;
+
+              </script>
         </div>
       </div>
     </div>
