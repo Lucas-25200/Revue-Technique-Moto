@@ -3527,7 +3527,7 @@ fieldset:disabled .btn {
 .btn-up {
   height: 50px;
   width: 50px;
-  border-radius: 35%;
+  border-radius: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3535,7 +3535,7 @@ fieldset:disabled .btn {
   right: 20px;
   bottom: 70px;
   cursor: pointer;
-  background: #a5a5a5;
+  background: #00ff496b;
 }
 
 .btn-light {
@@ -3674,6 +3674,7 @@ fieldset:disabled .btn {
   --bs-gradient: none;
   margin-block: 1rem;
   margin-inline: 107px;
+  cursor: s-resize;
 }
 
 .btn-outline-light {
@@ -4456,6 +4457,8 @@ fieldset:disabled .btn {
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .navbar-brand:hover,
@@ -7699,7 +7702,7 @@ fieldset:disabled .btn {
 }
 
 .offcanvas-title {
-  margin-bottom: 0;
+  margin-left: 103px;
   line-height: 1.5;
   color: white;
   text-align: center;
