@@ -75,17 +75,6 @@
 
               </script>
 
-              <div class="visites-count">
-                Nombre de visites : <span id="visit-counter"></span></div>
-              <script>
-                var visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
-                var visitCounter = document.getElementById('visit-counter');
-
-                visitCount++;
-                localStorage.setItem('visitCount', visitCount);
-                visitCounter.innerHTML = visitCount;
-
-              </script>
               <p>
                 <button class="btn btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
                   aria-expanded="false" aria-controls="collapseWidthExample">
