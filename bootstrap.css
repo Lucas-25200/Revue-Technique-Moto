@@ -3781,8 +3781,8 @@ fieldset:disabled .btn {
 }
 
 .collapsing.collapse-horizontal {
-  width: 0;
-  height: auto;
+  width: auto;
+  height: 0;
   transition: width 0.35s ease;
 }
 
