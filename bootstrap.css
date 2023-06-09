@@ -4283,6 +4283,7 @@ fieldset:disabled .btn {
 .nav-link {
   font-family: Rubik,sans-serif;
   font-weight: 700;
+  font-weight: bold;
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
