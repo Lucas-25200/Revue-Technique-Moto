@@ -80,7 +80,7 @@
 .download-counter {
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #d7d7d7#ffffff;
   background-color: #fff0;
   padding: 10px;
   border-radius: 5px;
@@ -88,7 +88,7 @@
 }
 
 #download-count {
-  color: #ff0000;
+  color: #ff0019;
   font-size: 24px;
   margin-left: 5px;
 }
