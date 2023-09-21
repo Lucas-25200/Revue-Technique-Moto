@@ -4,7 +4,7 @@ import pytesseract
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/Image RMT')
 def index():
     return render_template('index.html')
 
