@@ -28,7 +28,7 @@ def recherche():
     # Si aucune correspondance n'est trouvée, affichez un message d'erreur
     return render_template('resultats.html', erreur="Aucune correspondance trouvée.")
 
-@app.route('/image/<nom_image>')
+@app.route('/Image RMT/<nom_image>')
 def image(nom_image):
     # Récupérez l'image correspondante et affichez-la
     image_path = os.path.join(dossier_images, nom_image)
