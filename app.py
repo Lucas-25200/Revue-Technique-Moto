@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Emplacement du répertoire contenant les images/documents
-dossier_images = '/Image RMT'
+dossier_images = '/Image RMT/Page1.jpg'
 
 @app.route('/')
 def index():
