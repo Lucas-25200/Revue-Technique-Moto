@@ -1,38 +1,42 @@
 from flask import Flask, request, render_template, redirect, url_for
-from PIL import Image
 import pytesseract
-import os
+from PIL import Image
 
 app = Flask(__name__)
 
+# Configuration pour pytesseract (spécifiez le chemin de Tesseract sur votre système)
+pytesseract.pytesseract.tesseract_cmd = ''
+
 # Emplacement du répertoire contenant les images/documents
-dossier_images = '/Image RMT/Page1.jpg'
+dossier_images = 'Page1.jpg'
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/recherche', methods=['POST'])
-def recherche():
-    recherche_texte = request.form['recherche']
+@app.route('/search', methods=['POST'])
+def search():
+    search_term = request.form['search_term']
+    uploaded_image = request.files['image']
 
-    # Parcourez le répertoire des images/documents et recherchez le texte correspondant
-    for filename in os.listdir(dossier_images):
-        if filename.endswith('.png') or filename.endswith('.jpg'):
-            image_path = os.path.join(dossier_images, filename)
-            texte_extrait = pytesseract.image_to_string(Image.open(image_path))
-            if recherche_texte in texte_extrait:
-                # Redirigez vers l'image correspondante
-                return redirect(url_for('image', nom_image=filename))
+    if uploaded_image.filename != '':
+        img = Image.open(uploaded_image)
+        ocr_text = pytesseract.image_to_string(img)
 
-    # Si aucune correspondance n'est trouvée, affichez un message d'erreur
-    return render_template('resultats.html', erreur="Aucune correspondance trouvée.")
+        if search_term in ocr_text:
+            if search_term in word_to_image:
+                image_filename = word_to_image[search_term]
+                return redirect(url_for('image', filename=image_filename))
 
-@app.route('/Image RMT/<nom_image>')
-def image(nom_image):
-    # Récupérez l'image correspondante et affichez-la
-    image_path = os.path.join(dossier_images, nom_image)
-    return render_template('image.html', image_path=image_path)
+    return "Aucun résultat trouvé pour '{}'. Veuillez réessayer.".format(search_term)
+
+@app.route('/image/<filename>')
+def image(filename):
+    # Assurez-vous que les images sont stockées dans un répertoire accessible
+    return render_template('image.html', image_filename=filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
