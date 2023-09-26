@@ -8,7 +8,7 @@ app = Flask(__name__)
 pytesseract.pytesseract.tesseract_cmd = ''
 
 # Emplacement du répertoire contenant les images/documents
-dossier_images = 'Page1.jpg'
+dossier_images = 'Image RMT/'
 
 @app.route('/')
 def index():
