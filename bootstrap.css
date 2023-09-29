@@ -426,7 +426,9 @@ button:not(:disabled),
   cursor: pointer;
 }
 
--------Scrollbar------::-webkit-scrollbar {
+-------Scrollbar------
+::-webkit-scrollbar {
+  overflow: auto;
   width: 6px;
   height: 6px;
 }
@@ -468,7 +470,8 @@ button:not(:disabled),
   background: transparent;
 }
 
------------------------::-moz-focus-inner {
+-----------------------
+::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
