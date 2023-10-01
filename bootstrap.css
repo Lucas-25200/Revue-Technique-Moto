@@ -685,9 +685,7 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
-.imgnavbar{
-  width: 45px;
-}
+
 .img-fluid {
   width: 100%;
   height: auto;
