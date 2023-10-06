@@ -32,43 +32,51 @@
         aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sommaire</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="Etude Technique et Pratique.html">Etude Technique et Pratique</a>
-              <a class="nav-link" aria-current="page" href="Caractéristiques generales et reglages.html">Caractéristiques generales et reglages</a>
+              <a class="nav-link" aria-current="page" href="Etude Technique et Pratique.html">Etude Technique et
+                Pratique</a>
+              <a class="nav-link" aria-current="page"
+                href="Caractéristiques generales et reglages.html">Caractéristiques generales et reglages</a>
               <a class="nav-link" aria-current="page" href="Particularités technique.html">Particularités technique</a>
               <a class="nav-link" aria-current="page" href="Entretien courant.html">Entretien courant</a>
               <a class="nav-link" aria-current="page" href="Sommaire detaille.html">Sommaire detaille</a>
-              <a class="nav-link" aria-current="page" href="Se depanner sans tout demonter.html">Se depanner sans tout demonter</a>
+              <a class="nav-link" aria-current="page" href="Se depanner sans tout demonter.html">Se depanner sans tout
+                demonter</a>
               <a class="nav-link" aria-current="page" href="Conseils pratique.html">Conseils pratique</a>
               <a class="nav-link" aria-current="page" href="Moto-expertise.html">Moto-expertise</a>
 
-              <a href="RMT2.pdf" download onclick="incrementDownloadCount()" class="btn btn-outline-danger" download-btn
-                data-bs-toggle="tooltip" data-bs-placement="boutom" data-bs-custom-class="custom-tooltip"
-                data-bs-title="va vous telechargez la totaliter de la revue technique.">Download PDF</a>
+              <a href="RMT2.pdf" download download-btn type="button" class="btn btn-outline-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-download" viewBox="0 0 16 16">
+                  <path
+                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z">
+                  </path>
+                  <path
+                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z">
+                  </path>
+                </svg> Download
+              </a>
 
-              <form action="/recherche" method="post" enctype="multipart/form-data">
-                <input type="text" name="recherche" placeholder="Entrez du texte">
-                <button type="submit">Rechercher</button>
-
-                <p style="margin-bottom: 0px;">
-                  <button class="btn btn-outline-danger" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"
-                    style=" margin-left: 110px">
-                    QR-Code Site
-                  </button>
-                </p>
-                <div style="min-height: 120px;">
-                  <div class="collapse collapse-vertical" id="collapseWidthExample">
-                    <div class="card card-body"
-                      style="width: 150px;margin-left: 90px;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">
-                      <img src="Image RMT/qrcode Revue-Moto-Technique.png" class="img-fluid rounded-1">
-                    </div>
+              <p style="margin-bottom: 0px;">
+                <button class="btn btn-outline-danger" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample"
+                  style=" margin-left: 112px">
+                  QR-Code
+                </button>
+              </p>
+              <div style="min-height: 120px;">
+                <div class="collapse collapse-vertical" id="collapseWidthExample">
+                  <div class="card card-body"
+                    style="width: 150px;margin-left: 72px;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">
+                    <img src="Image RMT/qrcode Revue-Moto-Technique.png" class="img-fluid rounded-1">
                   </div>
                 </div>
+              </div>
 
         </div>
       </div>
