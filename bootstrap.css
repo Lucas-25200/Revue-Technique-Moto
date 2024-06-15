@@ -101,9 +101,55 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .Presentation{
+  border: 2px red;
   margin: 20px;
   text-align: center;
 }
+---------------------Recherche--------------------------
+.search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.search-container h2 {
+  margin-top: 0;
+}
+.search-bar {
+  font-weight: bold;
+  font-family:(--bs-body-font-family);
+  background: #ffffff00;
+  color: #fff;
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #884fb6;
+  border-radius: 5px;
+  margin-block: 10px;
+  margin-right: 5px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.btn-recherche{
+  font-weight: bold;
+  color: #fff;
+  background-color: #00000000;
+  border-color: #884fb6;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+--------------------------------------------------------
 ---------------------Commentaires-----------------------
 .comment-section {
   max-width: 800px;

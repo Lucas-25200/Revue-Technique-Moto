@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <link rel="website icon" type="png" href="Image RMT/Logo/Preview final">
   <link rel="stylesheet" href="bootstrap.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,6 +46,20 @@
                 demonter</a>
               <a class="nav-link" aria-current="page" href="Conseils pratique.html">Conseils pratique</a>
               <a class="nav-link" aria-current="page" href="Moto-expertise.html">Moto-expertise</a>
+
+              <div class="search-container" class="img-fluid rounded-1">
+                <input type="text" id="search-input" class="search-bar" placeholder="Rechercher...">
+                <button class="btn-recherche" onclick="redirectToResults()">Rechercher</button>
+              </div>
+
+              <script>
+                function redirectToResults() {
+                  const query = document.getElementById('search-input').value.trim();
+                  if (query) {
+                    window.location.href = `results.html?search=${encodeURIComponent(query)}`;
+                  }
+                }
+              </script>
 
               <a href="RMT2.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle=" tooltip
                 data-bs-placement="top" data-bs-custom-class="custom-tooltip"

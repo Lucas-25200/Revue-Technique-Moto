@@ -3,10 +3,11 @@
 
 <head>
   <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="script.js">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Se depanner sans tout demonter</title>
+  <title>Sommaire detaille</title>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
@@ -36,31 +37,21 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="Etude Technique et Pratique.html">Etude Technique et
+              <a class="nav-link" aria-current="page" href="Etude Technique et Pratique.html">Etude
+                Technique et
                 Pratique</a>
               <a class="nav-link" aria-current="page"
-                href="Caractéristiques generales et reglages.html">Caractéristiques generales et reglages</a>
-              <a class="nav-link" aria-current="page" href="Particularités technique.html">Particularités technique</a>
+                href="Caractéristiques generales et reglages.html">Caractéristiques generales et
+                reglages</a>
+              <a class="nav-link" aria-current="page" href="Particularités technique.html">Particularités
+                technique</a>
               <a class="nav-link" aria-current="page" href="Entretien courant.html">Entretien courant</a>
               <a class="nav-link" aria-current="page" href="Sommaire detaille.html">Sommaire detaille</a>
-              <a class="nav-link" aria-current="page" href="Se depanner sans tout demonter.html">Se depanner sans tout
+              <a class="nav-link" aria-current="page" href="Se depanner sans tout demonter.html">Se
+                depanner sans tout
                 demonter</a>
               <a class="nav-link" aria-current="page" href="Conseils pratique.html">Conseils pratique</a>
               <a class="nav-link" aria-current="page" href="Moto-expertise.html">Moto-expertise</a>
-
-              <div class="search-container" class="img-fluid rounded-1">
-                <input type="text" id="search-input" class="search-bar" placeholder="Rechercher...">
-                <button class="btn-recherche" onclick="redirectToResults()">Rechercher</button>
-              </div>
-
-              <script>
-                function redirectToResults() {
-                  const query = document.getElementById('search-input').value.trim();
-                  if (query) {
-                    window.location.href = `results.html?search=${encodeURIComponent(query)}`;
-                  }
-                }
-              </script>
 
               <a href="RMT2.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle=" tooltip
                 data-bs-placement="top" data-bs-custom-class="custom-tooltip"
@@ -70,17 +61,11 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <div style="text-align: center; MARGIN-BLOCK: 100px;">
-      <a>
-        <H1>Site en Coustuction</H1>
-        <h3>Arrive Prochainement</h3>
-      </a>
-    </div>
+  <div class="results-container">
+    <h4 class="Presentation">Résultats de Recherche</h4>
+    <div id="results" ></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
-    aria-valuemax="100">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%">60%</div>
+  <script src="script.js"></script>
   </div>
 </body>
 
