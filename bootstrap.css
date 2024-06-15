@@ -100,8 +100,105 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.Presentation{
+  margin: 20px;
+  text-align: center;
+}
+---------------------Commentaires-----------------------
+.comment-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ff0000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
 
-------------------------------------------------------------- ------------------------------------------------------------- .Btn {
+.comment-section h2 {
+  margin-bottom: 20px;
+  margin-top: 0;
+  border-bottom: 2px solid #884fb6;
+  padding-bottom: 10px;
+}
+
+.comment-form {
+  margin-bottom: 30px;
+}
+
+.comment-form textarea {
+  background-color: #00000000;
+  width: 80%;
+  height:100%;
+  padding: 15px;
+  border: 1px solid #884fb6;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.comment-form button {
+  font-family:(--bs-body-font-family);
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #884fb6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.comment-form button:hover {
+  background-color: #884fb6;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment-list li {
+  border-bottom: 1px solid #884fb6;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-list li:last-child {
+  border-bottom: none;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment .comment-author {
+  font-weight: bold;
+
+}
+
+.comment .comment-text {
+  font-size: 17px;
+}
+
+.delete-button {
+  font-family:(--bs-body-font-family);
+  font-weight: bold;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+--------------------------------------------------------
+.Btn {
   width: 45px;
   height: 45px;
   display: flex;
@@ -110,7 +207,6 @@ body {
   border: none;
   background-color: transparent;
   position: relative;
-  /* overflow: hidden; */
   border-radius: 7px;
   cursor: pointer;
   transition: all .3s;
@@ -152,7 +248,8 @@ body {
   backdrop-filter: blur(4px);
 }
 
-------------------------------------------------------------- hr {
+-------------------------------------------------------------
+hr {
   margin: 1rem 0;
   color: inherit;
   border: 0;
@@ -503,11 +600,11 @@ button:not(:disabled),
 }
 
 .simplebar-track.vertical {
-  top: 0;
+  /* top: 0; */
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 
 }
 
@@ -526,7 +623,8 @@ button:not(:disabled),
   border-radius: 10px;
 }
 
------------------------::-moz-focus-inner {
+-----------------------
+::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -12801,5 +12899,3 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-
-/*# sourceMappingURL=bootstrap.css.map */

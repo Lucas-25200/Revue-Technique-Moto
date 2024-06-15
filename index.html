@@ -6,6 +6,7 @@
   <link rel="website icon" type="png" href="Image RMT/Logo/Preview final">
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="app.py">
+  <link rel="stylesheet" href="js">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,10 +75,79 @@
   <div class="simplebar-track vertical" style="visibility: visible;">
     <div class="simplebar-scrollbar" style="top: 5px; height: 129px;"></div>
   </div>
+  <h4 class="Presentation">Proposer moi d'autre manuel de moto que vous vouvez que je mette dans le site</h4>
+
   <img src="Image RMT/2024-Yamaha-YZ450FSV-EU-Anniversary_White-Static-002-03.jpg" class="img-fluid rounded-1">
   <img src="Image RMT/2024-Yamaha-YZ450FSV-EU-Anniversary_White-Action-006-03.jpg" class="img-fluid rounded-1">
-  <img src="Image RMT/2024-Yamaha-YZ450FSV-EU-Anniversary_White-Action-007-03.jpg" class="img-fluid rounded-1">
-  <img src="Image RMT/2023_MC_Supersport.jpg" class="img-fluid rounded-1">
+
+  <div class="comment-section" style="margin-left: 20px;">
+    <h2>Commentaires</h2>
+    <div class="comment-form">
+      <textarea id="comment-input" placeholder="Écrivez votre commentaire ici..."></textarea>
+      <button onclick="addComment()">Soumettre</button>
+    </div>
+    <ul id="comment-list" class="comment-list"></ul>
+  </div>
+
+  <script>
+    // Charger les commentaires du stockage local
+    document.addEventListener("DOMContentLoaded", loadComments);
+
+    function loadComments() {
+      var comments = JSON.parse(localStorage.getItem("comments")) || [];
+      var commentList = document.getElementById("comment-list");
+
+      comments.forEach(function (comment, index) {
+        var newComment = document.createElement("li");
+        newComment.innerHTML = `
+                    <div class="comment">
+                        <div class="comment-author">Anonyme</div>
+                        <div class="comment-text">${comment}</div>
+                    </div>
+                    <button class="delete-button" onclick="deleteComment(${index})">Supprimer</button>
+                `;
+        commentList.appendChild(newComment);
+      });
+    }
+
+    function addComment() {
+      var commentInput = document.getElementById("comment-input");
+      var commentList = document.getElementById("comment-list");
+
+      if (commentInput.value.trim() !== "") {
+        var comments = JSON.parse(localStorage.getItem("comments")) || [];
+        comments.push(commentInput.value);
+        localStorage.setItem("comments", JSON.stringify(comments));
+
+        var newComment = document.createElement("li");
+        var index = comments.length - 1; // Index du nouveau commentaire
+        newComment.innerHTML = `
+                    <div class="comment">
+                        <div class="comment-author">Anonyme</div>
+                        <div class="comment-text">${commentInput.value}</div>
+                    </div>
+                    <button class="delete-button" onclick="deleteComment(${index})">Supprimer</button>
+                `;
+        commentList.appendChild(newComment);
+
+        commentInput.value = "";
+      }
+    }
+
+    function deleteComment(index) {
+      var comments = JSON.parse(localStorage.getItem("comments")) || [];
+      comments.splice(index, 1);
+      localStorage.setItem("comments", JSON.stringify(comments));
+      reloadComments();
+    }
+
+    function reloadComments() {
+      var commentList = document.getElementById("comment-list");
+      commentList.innerHTML = "";
+      loadComments();
+    }
+
+  </script>
 
   <div class="btn-up">
     <img src="Image RMT/arrow-up-short.svg" class="icone">
@@ -94,6 +164,7 @@
 
       })
     </script>
+
 </body>
 
 </html>
