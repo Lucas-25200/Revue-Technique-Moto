@@ -101,8 +101,10 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .Presentation{
-  border: 2px red;
+  border: 2px solid #884fb6;
+  border-radius: 5px;
   margin: 20px;
+  padding: 10px;
   text-align: center;
 }
 ---------------------Recherche--------------------------
@@ -143,26 +145,39 @@ body {
 }
 .btn-recherche{
   font-weight: bold;
-  color: #fff;
+  color: #6c6b6b;
   background-color: #00000000;
-  border-color: #884fb6;
+  border: 2px solid #884fb6;
   border-radius: 5px;
   padding: 5px 10px;
+}
+.btn-recherche:hover {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+}
+.results-container{
+  margin: 15px;
+  border: 2px solid #884fb6;
+  border-radius: 5px;
+}
+.results {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-color: #884fb6;
+  border-radius: 5px;
+
 }
 --------------------------------------------------------
 ---------------------Commentaires-----------------------
 .comment-section {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ff0000;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+display: none;
 }
 
 .comment-section h2 {
   margin-bottom: 20px;
-  margin-top: 0;
+  margin-top: 20px;
   border-bottom: 2px solid #884fb6;
   padding-bottom: 10px;
 }
@@ -172,26 +187,28 @@ body {
 }
 
 .comment-form textarea {
-  background-color: #00000000;
+  background-color: #72696900;
+  color: #fff;
+  font-weight: bold;
   width: 80%;
   height:100%;
   padding: 15px;
   border: 1px solid #884fb6;
   border-radius: 4px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .comment-form button {
   font-family:(--bs-body-font-family);
   font-weight: bold;
   padding: 10px 20px;
-  background-color: #884fb6;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+  background: #00000000;
+  color: #ffffff;
+  border: 2px solid #884fb6;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .comment-form button:hover {
@@ -199,6 +216,7 @@ body {
 }
 
 .comment-list {
+  font-weight: bold;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -226,22 +244,23 @@ body {
 }
 
 .comment .comment-text {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .delete-button {
   font-family:(--bs-body-font-family);
   font-weight: bold;
-  background-color: #ff4d4d;
-  color: #fff;
+  background-color: #b4363600;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border: 2px solid #884fb6;
+  border-radius: 5px;
   cursor: pointer;
   padding: 10px;
 }
 
 .delete-button:hover {
-  background-color: #ff1a1a;
+  background-color: #af3232;
 }
 --------------------------------------------------------
 .Btn {
@@ -676,7 +695,7 @@ button:not(:disabled),
 }
 
 textarea {
-  resize: vertical;
+  /* resize: vertical; */
 }
 
 fieldset {
@@ -3516,7 +3535,7 @@ textarea.form-control.is-invalid {
   font-size: var(--bs-btn-font-size);
   font-weight: var(--bs-btn-font-weight);
   line-height: var(--bs-btn-line-height);
-  color: var(--bs-btn-color);
+  color: #6c6b6b;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -3830,6 +3849,7 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-danger {
+  font-weight: bold;
   --bs-btn-color: #6c6b6b;
   --bs-btn-border-color:var(--bs-theme1);
   --bs-btn-hover-color: #fff;
@@ -4639,7 +4659,7 @@ fieldset:disabled .btn {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: var(--bs-navbar-color);
+  --bs-nav-link-color: #d7d7d7;
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
   --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
   display: flex;

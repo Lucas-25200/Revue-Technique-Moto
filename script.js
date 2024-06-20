@@ -64,7 +64,7 @@ function displayResults(query) {
     { url: "Image RMT/Yamaha DT 125 LC/Page37.jpg", tags: "page *****" },
     { url: "Image RMT/Yamaha DT 125 LC/Page38.jpg", tags: "page *****" },
     { url: "Image RMT/Yamaha DT 125 LC/Page39.jpg", tags: "page *****" },
-                
+
   ];
 
   const resultsContainer = document.getElementById("results");

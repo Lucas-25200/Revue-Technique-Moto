@@ -54,6 +54,20 @@
               <a class="nav-link" aria-current="page" href="Conseils pratique.html">Conseils pratique</a>
               <a class="nav-link" aria-current="page" href="Moto-expertise.html">Moto-expertise</a>
 
+              <div class="search-container" class="img-fluid rounded-1">
+                <input type="text" id="search-input" class="search-bar" placeholder="Rechercher...">
+                <button class="btn-recherche" onclick="redirectToResults()">Rechercher</button>
+              </div>
+
+              <script>
+                function redirectToResults() {
+                  const query = document.getElementById('search-input').value.trim();
+                  if (query) {
+                    window.location.href = `results.html?search=${encodeURIComponent(query)}`;
+                  }
+                }
+              </script>
+
               <a href="RMT2.pdf" download class="btn btn-outline-danger download-btn data-bs-toggle=" tooltip
                 data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                 data-bs-title="va vous telecharger la totaliter de la revue technique.">Download</a>
@@ -64,7 +78,7 @@
   </nav>
   <div class="results-container">
     <h4 class="Presentation">Résultats de Recherche</h4>
-    <div id="results" ></div>
+    <div id="results" class="results"></div>
   </div>
   <script src="script.js"></script>
   </div>
