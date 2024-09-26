@@ -383,6 +383,25 @@ h4,
   font-size: calc(1.275rem + 0.3v);
 }
 
+
+
+@media (max-width: 401px) {
+  h4,
+  .h4 {
+    font-size: calc(1rem);
+  }
+  }
+  
+  @media (min-width: 401px) {
+  h4,
+  .h4 {
+    font-size: calc(1.5rem);
+  }
+  }
+
+
+
+
 @media (min-width: 1200px) {
 
   h4,
@@ -943,14 +962,6 @@ progress {
   color: #6c757d;
 }
 
-
-@media (min-width: 401px) {
-
-.h4
-.Presentation{
-  font-size: calc(1.275rem);
-  }
-}
 
 
 @media (min-width: 401px) {
@@ -4715,7 +4726,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-toggler {
-  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  /* padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x); */
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
   color: var(--bs-navbar-color);
