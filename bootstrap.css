@@ -4726,7 +4726,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-toggler {
-  /* padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x); */
+ padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
   color: var(--bs-navbar-color);
